@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font clicker changer</title>
+     <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* allow next line */
+            width: 270px; /* controls total width */
+            gap: 5px; /* space between boxes */
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+        }
+
+        .gray { background-color: gray; }
+        .white { background-color: white; }
+        .blue { background-color: blue; }
+        .yellow { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1>color Scheme Switcher</h1>
+     <div class="container">
+        <div class="box gray" onclick="document.body.style.backgroundColor = `${'gray'}`"></div>
+        <div class="box white"onclick="document.body.style.backgroundColor = `${'white'}`"></div>
+        <div class="box blue"onclick="document.body.style.backgroundColor = `${'blue'}`"></div>
+        <div class="box yellow"onclick="document.body.style.backgroundColor = `${'yellow'}`"></div>
+    </div>
+
+    <h2>
+        choose a color in order to change the background color of this page 
+    </h2>
+</body>
+</html>
