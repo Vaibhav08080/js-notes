@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+    body {
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <div>
+        <p>height in CM:</p>
+        <input id="height" class="height" type="text" placeholder="Enter your Height">
+    </div>
+    <div>
+        <p>Weight in KG:</p>
+        <input id="weight" class="weight" type="text" placeholder="Enter your Weight">
+    </div>
+
+    <button onclick="Calculate()">Calculate</button>
+
+    <p id="result">Result:</p>
+    
+</body>
+<script>
+    function Calculate(){
+        let weight= parseFloat(document.getElementById("weight").value || 0)
+        let height= parseFloat(document.getElementById("height").value || 0)
+        let sum = weight / ((height / 100) ** 2);
+
+        document.getElementById("result").textContent = "Sum: " + sum;
+
+    }
+</script>
+</html>
