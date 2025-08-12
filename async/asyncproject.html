@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function</title>
+</head>
+<body style="background-color: #414141; color: aliceblue">
+    <h1>ASYNC CODE</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+    <script>
+        let intervalId; // interval id ko global bana lo
+
+        function SayDate() {
+            console.log(Date.now());
+        }
+
+        function startfunction() {
+            // Taaki ek se zyada interval na chal paaye
+            if(!intervalId){
+                intervalId = setInterval(SayDate, 1000);
+            }
+        }
+
+        document.querySelector("#start").addEventListener("click", startfunction);
+
+        document.querySelector("#stop").addEventListener("click", function(){
+            clearInterval(intervalId); // interval ko clear karo
+            intervalId = null; // interval id ko null kar do
+        });
+    </script>
+</body>
+</html>
